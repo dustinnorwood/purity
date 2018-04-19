@@ -20,7 +20,7 @@ data SampleContractData = { owner :: Address }
 
 type OnlyOwner = State SampleContractData
 
-getOwner :: OnlyOwner ()
+getOwner :: OnlyOwner Address
 getOwner = owner <$> get
   
 guardOnlyOwner :: OnlyOwner ()
